@@ -1,0 +1,29 @@
+.layout{
+  padding: 0 15px;
+}
+
+
+
+@media(min-width:768px){
+  .layout{
+    width:1170px;
+    margin: 0 auto;
+  }
+  .top-bar{
+    padding: 10px 0;
+    border-bottom: 1px solid var(--global-border-color);
+    .layout,.language,.langu,.login-social,.social{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .language > div,
+  .langu > strong,
+  .langu > a,
+  .langu > span,
+  .login > a,
+  .social > li {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+}

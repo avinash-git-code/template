@@ -1,0 +1,29 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:nodeSass": "node-sass --watch assets/sass -o assets/css --output-style compact"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avinash-git-code/template.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS",
+    "PHP"
+  ],
+  "author": "Avinash Chand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avinash-git-code/template/issues"
+  },
+  "homepage": "https://github.com/avinash-git-code/template#readme",
+  "devDependencies": {
+    "lite-server": "^2.4.0",
+    "node-sass": "^4.12.0"
+  }
+}
