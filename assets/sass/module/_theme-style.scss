@@ -43,6 +43,11 @@ a{
     }
   }
 }
+footer {
+  .layout{
+    padding: 15px 0;
+  }
+}
 
 @media(min-width:768px){
   .layout{
@@ -50,11 +55,13 @@ a{
     margin: 0 auto;
   }
 
-  .logo-cont .layout,.langu{
+  .logo-cont .layout,.langu,
+  footer .layout{
     display: flex;
     justify-content: space-between;
   }
-  .logo-cont .layout{
+  .logo-cont .layout,
+  footer .layout{
     align-items: center;
   }
   .langu > strong,
@@ -64,10 +71,19 @@ a{
   .social > li {
     margin-left: 10px;
   }
+
 }
 
 @media(max-width:768px){
   .language{
     margin-bottom: 15px;
+  }
+  footer {
+    .layout{
+      text-align: center;
+      > div{
+        margin-bottom: 15px;
+      }
+    }
   }
 }

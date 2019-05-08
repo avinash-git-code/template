@@ -2976,9 +2976,17 @@ a { color: #ccc; }
 
 .logo-cont .layout > div { text-align: center; }
 
+footer .layout { padding: 15px 0; }
+
 @media (min-width: 768px) { .layout { width: 1170px; margin: 0 auto; }
-  .logo-cont .layout, .langu { display: flex; justify-content: space-between; }
-  .logo-cont .layout { align-items: center; }
+  .logo-cont .layout, .langu, footer .layout { display: flex; justify-content: space-between; }
+  .logo-cont .layout, footer .layout { align-items: center; }
   .langu > strong, .langu > a, .langu > span, .login > a, .social > li { margin-left: 10px; } }
 
-@media (max-width: 768px) { .language { margin-bottom: 15px; } }
+@media (max-width: 768px) { .language { margin-bottom: 15px; }
+  footer .layout { text-align: center; }
+  footer .layout > div { margin-bottom: 15px; } }
+
+footer { padding-top: 22px; position: relative; background: url(../images/footer-bg.jpg) repeat; }
+
+footer:before { position: absolute; content: ""; height: 22px; background: url(../images/footer-border.jpg) repeat-x; left: 0; width: 100%; top: 0; }

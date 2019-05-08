@@ -1,0 +1,14 @@
+footer{
+  padding-top:22px;
+  position: relative;
+  &:before{
+    position: absolute;
+    content: "";
+    height: 22px;
+    background: url(../images/footer-border.jpg) repeat-x;
+    left: 0;
+    width: 100%;
+    top:0;
+  }
+  background: url(../images/footer-bg.jpg) repeat;
+}
