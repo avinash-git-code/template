@@ -15,7 +15,7 @@ a{
   padding: 10px 0;
   border-bottom: 1px solid var(--global-border-color);
 }
-.top-bar .layout, .language,
+.top-bar .layout .language, 
 .social,
 .login-social{
   display: flex;
@@ -55,8 +55,8 @@ footer {
     margin: 0 auto;
   }
 
-  .logo-cont .layout,.langu,
-  footer .layout{
+  .top-bar .layout, .logo-cont .layout,.langu,
+  footer .layout,.language{
     display: flex;
     justify-content: space-between;
   }
