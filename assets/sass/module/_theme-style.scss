@@ -1,29 +1,73 @@
+body{
+  font-size: 14px;
+  font-family: Arial, halvatica, sans-serif;
+  line-height: 1.4;
+  color: #ccc;
+}
+a{
+  color: #ccc;
+}
+
 .layout{
   padding: 0 15px;
 }
+.top-bar{
+  padding: 10px 0;
+  border-bottom: 1px solid var(--global-border-color);
+}
+.top-bar .layout, .language,
+.social,
+.login-social{
+  display: flex;
+  justify-content: space-between;
+}
 
+.langu > strong,
+.langu > a,
+.langu > span,
+.login > a
+ {
+    margin-right: 10px;
+  }
+.social > li{
+  &:not(:last-child){
+    margin-right: 20px;
+  }
+}
 
+.logo-cont {
+  .layout {
+    padding: 15px 0;
+    > div{
+      text-align: center;
+    }
+  }
+}
 
 @media(min-width:768px){
   .layout{
     width:1170px;
     margin: 0 auto;
   }
-  .top-bar{
-    padding: 10px 0;
-    border-bottom: 1px solid var(--global-border-color);
-    .layout,.language,.langu,.login-social,.social{
-      display: flex;
-      justify-content: space-between;
-    }
+
+  .logo-cont .layout,.langu{
+    display: flex;
+    justify-content: space-between;
   }
-  .language > div,
+  .logo-cont .layout{
+    align-items: center;
+  }
   .langu > strong,
   .langu > a,
   .langu > span,
   .login > a,
   .social > li {
-      margin-right: 10px;
-      margin-left: 10px;
-    }
+    margin-left: 10px;
+  }
+}
+
+@media(max-width:768px){
+  .language{
+    margin-bottom: 15px;
+  }
 }
