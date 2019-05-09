@@ -15,7 +15,7 @@ a{
   padding: 10px 0;
   border-bottom: 1px solid var(--global-border-color);
 }
-.top-bar .layout .language, 
+.top-bar .layout .language,
 .social,
 .login-social{
   display: flex;
@@ -43,6 +43,9 @@ a{
     }
   }
 }
+nav{
+  background: var(--nav-bg-color);
+}
 footer {
   .layout{
     padding: 15px 0;
@@ -54,11 +57,21 @@ footer {
     width:1170px;
     margin: 0 auto;
   }
-
+  .ham-button{display: none;}
   .top-bar .layout, .logo-cont .layout,.langu,
   footer .layout,.language{
     display: flex;
     justify-content: space-between;
+  }
+  nav{
+    ul{
+      display: flex;
+      padding: 15px 0;
+      font-size: 1.3em;
+      li{
+        margin-right: 50px;
+      }
+    }
   }
   .logo-cont .layout,
   footer .layout{
@@ -77,6 +90,63 @@ footer {
 @media(max-width:768px){
   .language{
     margin-bottom: 15px;
+  }
+  nav{
+    padding: 10px 0 5px;
+    position: relative;
+  }
+  .ham-button {
+    position: relative;
+    height: 24px;
+    width: 35px;
+    background: transparent;
+    border: none;
+    &:focus{
+      outline: none;
+    }
+    + ul{
+      display: none;
+      position: absolute;
+      z-index: 1;
+      bottom: -237px;
+      background: var(--nav-bg-color);
+      width: 100%;
+      left: 0;
+      padding: 20px 20px 0;
+      li{
+        margin-bottom: 25px;
+        font-size: 1.5em;
+      }
+    }
+    border-top:3px solid #fff;
+    &:before,
+    &:after{
+      width:100%;
+      height: 3px;
+      background: #fff;
+      content: "";
+      position: absolute;
+      transition: all .3s;
+      left: 0;
+    }
+    &:before{
+      top: 32%;
+      // transform: translateY(-50%);
+    }
+    &:after{
+      bottom: 0;
+    }
+  &.close{
+    border-top:0;
+    &:before{
+      top:10px;
+      transform: rotate(45deg);
+    }
+    &:after{
+      bottom: 11px;
+      transform: rotate(-45deg);
+    }
+  }
   }
   footer {
     .layout{

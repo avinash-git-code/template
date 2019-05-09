@@ -1,6 +1,15 @@
 $(document).ready(function(){
 
-  
+  // Mobile ham menu
+  $('.ham-button').click(function(){
+    if( $(this).hasClass('close') ){
+      $(this).removeClass('close');
+      $('nav ul').slideUp();
+    }else{
+      $(this).addClass('close');
+      $('nav ul').slideDown();
+    }
+  });
 
 
     $('.ts_nw_list:first-of-type').slick({
