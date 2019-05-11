@@ -11,7 +11,7 @@ $(document).ready(function(){
     }
   });
 
-// Slider 
+// Slider
     $('.slder-cont ul').slick({
         dots: true,
         infinite: false,
@@ -21,4 +21,10 @@ $(document).ready(function(){
         autoPlay:true
     });
 
+    var monthNames = ["January", "February", "March", "April",
+                        "May", "June","July", "August", "September",
+                        "October", "November", "December"],
+    date = new Date();
+    var todayDate = date.getDate() + ' ' +monthNames[date.getMonth()]+', '+ date.getFullYear();
+    $('#date').text(todayDate);
 });

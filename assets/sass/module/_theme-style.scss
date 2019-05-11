@@ -41,7 +41,9 @@ h3{
   display: flex;
   justify-content: space-between;
 }
-
+.langu{
+  align-items: center;
+}
 .langu > strong,
 .langu > a,
 .langu > span,
@@ -197,7 +199,7 @@ footer {
       display: none;
       position: absolute;
       z-index: 1;
-      top: 44px;  
+      top: 44px;
       background: var(--nav-bg-color);
       width: 100%;
       left: 0;
